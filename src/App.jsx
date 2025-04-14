@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css'
 
 export default function App() {
@@ -8,6 +9,13 @@ export default function App() {
         inputBody: "",
         inputPublic: true,
     })
+
+    function handlerFormData(e) {
+        setFormData((formData) => ({
+            ...formData,
+            [e.target.name]: e.target.value,
+        }));
+    }
 
     return (<>
         <h2>Nuovo post</h2>
@@ -19,6 +27,7 @@ export default function App() {
                 type="text"
                 name='inputAuthor'
                 value={formData.inputAuthor}
+                onChange={handlerFormData}
             />
         </div>
         <div>
@@ -29,6 +38,7 @@ export default function App() {
                 type="text"
                 name='inputTitle'
                 value={formData.inputTitle}
+                onChange={handlerFormData}
             />
         </div>
         <div>
@@ -39,6 +49,7 @@ export default function App() {
                 type="text"
                 name='inputBody'
                 value={formData.inputBody}
+                onChange={handlerFormData}
             />
         </div>
 
@@ -46,10 +57,14 @@ export default function App() {
             <select
                 name="inputPublic"
                 value={formData.inputPublic}
+                onChange={handlerFormData}
             >
                 <option value="true">Pubblica</option>
                 <option value="false">Salva come bozza</option>
             </select>
+        </div>
+        <div>
+            <button>Carica Post!</button>
         </div>
     </>);
 }
