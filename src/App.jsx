@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'
 
-export default function App() {
+function App() {
     const [formData, setFormData] = useState({
         inputAuthor: "",
         inputTitle: "",
@@ -84,3 +84,5 @@ export default function App() {
         </div>
     </>);
 }
+
+export default App;
