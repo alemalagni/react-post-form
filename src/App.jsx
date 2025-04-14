@@ -2,19 +2,27 @@ import './App.css'
 
 export default function App() {
     return (<>
-        <p>Nuovo post</p>
+        <h2>Nuovo post</h2>
         <div>
             <p>Inserire il nome dell'autore:</p>
+        </div>
+        <div>
             <input type="text" id='inputAuthor' />
         </div>
         <div>
             <p>Inserire il titolo del post:</p>
-            <input type="text" id='inputTitle' />
         </div>
         <div>
+            <input type="text" id='inputTitle' />
+        </div>
+
+        <div>
             <p>Inserire il corpo del post:</p>
+        </div>
+        <div>
             <input type="text" id='inputBody' />
         </div>
+
         <div>
             <select name="" id="inputPublic">
                 <option value="true">Pubblica</option>
