@@ -26,9 +26,13 @@ function App() {
         })
             .then((res) => (
                 console.log("Post caricato!"),
-                console.log(res.data)
+                console.log(res.data),
+                alert('Post caricato correttamente')
             ))
-            .catch(error => console.error(error));
+            .catch(error => (
+                console.log('Si è verificato un errore nel caricare il post'),
+                console.error(error)
+            ));
     }
 
     //useEffect(fetchPost, []);
