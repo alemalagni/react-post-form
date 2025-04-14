@@ -1,7 +1,7 @@
 import './App.css'
 
 export default function App() {
-    <>
+    return (<>
         <p>Nuovo post</p>
         <div>
             <p>Inserire il nome dell'autore:</p>
@@ -21,5 +21,5 @@ export default function App() {
                 <option value="false">Salva come bozza</option>
             </select>
         </div>
-    </>
+    </>);
 }
