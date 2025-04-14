@@ -17,6 +17,19 @@ export default function App() {
         }));
     }
 
+    function fetchPost() {
+        axios.post('https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts', {
+            title: inputTitle,
+            author: inputAuthor,
+            body: inputBody,
+            public: inputPublic
+        })
+            .then((res) => console.log("Post caricato!"))
+            .catch(error => console.error(error));
+    }
+
+    useEffect(fetchPost, []);
+
     return (<>
         <h2>Nuovo post</h2>
         <div>
