@@ -77,7 +77,10 @@ export default function App() {
             </select>
         </div>
         <div>
-            <button>Carica Post!</button>
+            <button
+                onClick={fetchPost}
+            >
+                Carica Post!</button>
         </div>
     </>);
 }
