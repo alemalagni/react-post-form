@@ -1,6 +1,6 @@
 import './App.css'
 
-function App() {
+export default function App() {
     <>
         <p>Nuovo post</p>
         <div>
@@ -23,5 +23,3 @@ function App() {
         </div>
     </>
 }
-
-export default App
