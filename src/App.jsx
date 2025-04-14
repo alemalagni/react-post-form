@@ -24,7 +24,10 @@ function App() {
             body: formData.inputBody,
             public: formData.inputPublic
         })
-            .then((res) => console.log("Post caricato!"))
+            .then((res) => (
+                console.log("Post caricato!"),
+                console.log(res.data)
+            ))
             .catch(error => console.error(error));
     }
 
